@@ -10,6 +10,7 @@ import Navbaar from './components/Navbaar';
 import Home from './components/Home';
 import Register from './components/Register';
 import Edit from './components/Edit';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

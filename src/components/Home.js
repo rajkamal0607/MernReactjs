@@ -68,6 +68,7 @@ const Home = () => {
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Password</th>
                                 <th>Technology</th>
                                 <th>Action</th>
                             </tr>
@@ -82,6 +83,7 @@ const Home = () => {
                                                 <td>{id + 1}</td>
                                                 <td>{element.name}</td>
                                                 <td>{element.email}</td>
+                                                <td>{element.password}</td>
                                                 <td>{element.tech}</td>
                                                 <td>
                                                     <LinkContainer to={`/edit/${element._id}`}>

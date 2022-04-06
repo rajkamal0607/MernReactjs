@@ -8,7 +8,8 @@ const Register = () => {
     const [inputVal, setInput] = useState({
         name: "",
         email: "",
-        tech: ""
+        tech: "",
+        password: ""
     })
 
     const setdata = (e) => {
@@ -25,7 +26,7 @@ const Register = () => {
     const addInputData = async (e) => {
         e.preventDefault();
 
-        const { name, email, tech } = inputVal;
+        const { name, email, tech, password } = inputVal;
 
         const res = await fetch("/register", {
             method: "POST",
@@ -33,7 +34,7 @@ const Register = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name, email, tech
+                name, email, tech, password
             })
         });
 
@@ -69,6 +70,11 @@ const Register = () => {
                     <Form.Group className="mb-3">
                         <Form.Label>Technology</Form.Label>
                         <input type="text" className="form-control" value={inputVal.tech} onChange={setdata} name="tech" id="inpt_tech" placeholder="Enter Tech" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Password</Form.Label>
+                        <input className="form-control" type="number" value={inputVal.password} onChange={setdata} name="password" id="inpt_password" placeholder="Enter Password" />
                     </Form.Group>
 
                     <Button variant="primary" onClick={addInputData} type="submit">Submit</Button>

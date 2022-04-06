@@ -12,7 +12,8 @@ const Edit = () => {
     const [inputVal, setInput] = useState({
         name: "",
         email: "",
-        tech: ""
+        tech: "",
+        password: ""
     })
 
     const setdata = (e) => {
@@ -54,7 +55,7 @@ const Edit = () => {
 
     const updateuser = async (e) => {
 
-        const { name, email, tech } = inputVal;
+        const { name, email, tech, password } = inputVal;
 
         e.preventDefault();
         const res2 = await fetch(`/updateuser/${id}`, {
@@ -63,7 +64,7 @@ const Edit = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                name, email, tech
+                name, email, tech, password
             })
         });
 
@@ -98,6 +99,11 @@ const Edit = () => {
                     <Form.Group className="mb-3">
                         <Form.Label>Technology</Form.Label>
                         <input className="form-control" type="text" value={inputVal.tech} onChange={setdata} name="tech" id="inpt_tech" placeholder="Enter Tech" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Password</Form.Label>
+                        <input className="form-control" type="number" value={inputVal.password} onChange={setdata} name="password" id="inpt_password" placeholder="Enter Password" />
                     </Form.Group>
 
                     <Button variant="primary" onClick={updateuser} type="submit">Submit</Button>
