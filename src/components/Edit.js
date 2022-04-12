@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { LinkContainer } from "react-router-bootstrap";
@@ -30,7 +30,7 @@ const Edit = () => {
     const { id } = useParams("");
     console.log(id);
 
-    const getdata = async () => {
+    const getdata = useCallback(async () => {
         const res = await fetch(`/getuser/${id}`, {
             method: "GET",
             headers: {
@@ -47,11 +47,11 @@ const Edit = () => {
             setInput(data);
             console.log("get data");
         }
-    }
+    },[id])
 
     useEffect(() => {
         getdata();
-    }, [])
+    }, [getdata])
 
     const updateuser = async (e) => {
 
@@ -82,8 +82,8 @@ const Edit = () => {
         <>
             <Navbaar />
             <div className="container">
-                <LinkContainer to="/home">
-                    <Button className="my-3" variant="primary">Home</Button>
+                <LinkContainer to="/userslist">
+                    <Button className="my-3" variant="primary">Users</Button>
                 </LinkContainer>
                 <Form className="my-4">
                     <Form.Group className="mb-3">

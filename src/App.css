@@ -1,3 +1,71 @@
-.add-btn{
+.add-btn {
   text-align: right;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.80857;
+  font-weight: normal;
+}
+
+h1 {
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  font-weight: normal;
+  line-height: normal;
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  margin: 0px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.head_top {
+  background: url("./images/banner.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner_main {
+  padding: 90px 0 190px 0;
+}
+
+.text-bg {
+  text-align: left;
+  max-width: 561px;
+  width: 100%;
+  float: right;
+  padding-right: 141px;
+}
+
+.text-img {
+  padding-top: 100px;
+}
+
+.user_detail_banner{
+  background: url("./images/detail_page.jpg");
+  background-size: cover;
 }

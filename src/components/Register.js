@@ -53,8 +53,8 @@ const Register = () => {
         <>
             <Navbaar />
             <div className="container">
-                <LinkContainer to="/home">
-                    <Button className="my-3" variant="primary">Home</Button>
+                <LinkContainer to="/userslist">
+                    <Button className="my-3" variant="primary">Users</Button>
                 </LinkContainer>
                 <Form className="my-4">
                     <Form.Group className="mb-3">

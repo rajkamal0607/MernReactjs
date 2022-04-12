@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router'
 import Navbaar from './Navbaar';
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const [user, setuser] = useState({
         email: "",
@@ -40,6 +43,7 @@ const Login = () => {
         } else {
             alert("Login Successful");
             console.log("Login Successful");
+            navigate("/home");
         }
     }
 
