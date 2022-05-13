@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
-import { useNavigate } from 'react-router'
 import Navbaar from './Navbaar';
+import { useNavigate } from 'react-router'
 
 const Login = () => {
 
-    const navigate = useNavigate();
+    const Navigate = useNavigate();
 
     const [user, setuser] = useState({
         email: "",
         password: ""
     })
 
-    const handleChange = e => {
-        const {name, value} = e.target
+    const handleChange = (e) => {
+        const { name, value } = e.target
         setuser({
             ...user,
-            [name] :value
+            [name]: value
         })
     }
 
@@ -43,9 +43,9 @@ const Login = () => {
         } else {
             alert("Login Successful");
             console.log("Login Successful");
-            navigate("/home");
+            Navigate("/");
         }
-    }
+    };
 
     return (
         <>

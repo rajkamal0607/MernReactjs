@@ -49,10 +49,16 @@ const Register = () => {
             console.log("data added");
         }
     }
+
+    const myStyle = {
+        backgroundColor:'#0093AB',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'auto'
+    }
     return (
         <>
             <Navbaar />
-            <div className="container">
+            <div style={myStyle} className="container">
                 <LinkContainer to="/userslist">
                     <Button className="my-3" variant="primary">Users</Button>
                 </LinkContainer>

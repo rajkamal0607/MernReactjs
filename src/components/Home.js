@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbaar from './Navbaar';
-import images from '../images/box_img.png'
+import box_img from '../images/box_img.png'
 
 const Home = () => {
 
@@ -19,7 +19,7 @@ const Home = () => {
                      </div>
                      <div className="col-md-6">
                         <div className="text-img">
-                           <figure><img src={images} alt="#" /></figure>
+                           <figure><img src={box_img} alt="#" /></figure>
                         </div>
                      </div>
                   </div>

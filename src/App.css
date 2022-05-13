@@ -2,19 +2,6 @@
   text-align: right;
 }
 
-* {
-  box-sizing: border-box !important;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  line-height: 1.80857;
-  font-weight: normal;
-}
-
 h1 {
   letter-spacing: 0;
   font-weight: normal;
@@ -63,9 +50,4 @@ img {
 
 .text-img {
   padding-top: 100px;
-}
-
-.user_detail_banner{
-  background: url("./images/detail_page.jpg");
-  background-size: cover;
 }
